@@ -2,6 +2,7 @@ import { ContainerLayout, FlexContainer } from "@/layouts"
 import React from "react"
 import { HeaderUl, HeaderTitle, HeaderWrapper } from "./components"
 import { NavLink } from "react-router-dom"
+import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from "@/constants"
 
 export const Header = props => {
   return (
@@ -10,11 +11,11 @@ export const Header = props => {
 justify="space-between">
       <HeaderTitle {...props}>CalculatorApp</HeaderTitle>
       <HeaderUl>
-        <NavLink to="/" activeClassName="current"
+        <NavLink to={HOME_PAGE_ROUTE} activeClassName="current"
 exact>
           <li>Home</li>
         </NavLink>
-        <NavLink to="/settings" activeClassName="current"
+        <NavLink to={SETTINGS_PAGE_ROUTE} activeClassName="current"
 exact>
           <li>Settings</li>
         </NavLink>
