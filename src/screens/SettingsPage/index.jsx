@@ -1,3 +1,11 @@
+import { ThemeSelector } from "@/components/Select"
 import React from "react"
 
-export const SettingsPage = () => <h2>settings</h2>
+export const SettingsPage = () => {
+  return (
+    <React.Fragment>
+      <h1>Settings</h1>
+      <ThemeSelector />
+    </React.Fragment>
+  )
+}
