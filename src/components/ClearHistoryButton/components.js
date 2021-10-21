@@ -4,8 +4,11 @@ export const Button = styled.button`
   display: block;
   text-align: left;
   padding-left: 27px;
-  width: 401px;
-  height: 93px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  max-width: 401px;
+  width: 100%;
+  min-height: 93px;
   border: 2px solid ${props => props.theme.colors.primary};
   border-radius: 8px;
   font-size: ${props => props.theme.fontSizes[5]}px;

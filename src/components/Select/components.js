@@ -1,17 +1,23 @@
 import styled from 'styled-components'
 import arrow from '../../assets/arrow.png'
 
-export const DropDownContainer = styled.div`
-  position: relative;
+export const DropDownBase = styled.div`
   width: 401px;
+  height: 94px;
+`
+
+export const DropDownContainer = styled.div`
+  position: ${props => props.isOpen ? 'absolute' : 'relative'};
+  max-width: 401px;
   min-height: 93px;
   border: 2px solid ${props => props.theme.colors.primary};
   border-radius: 8px;
   font-size: ${props => props.theme.fontSizes[5]}px;
   line-height: 38px;
-  padding-bottom: ${props => props.isOpen ? 8 : 0}px;
+  padding-bottom: ${props => props.isOpen ? 5 : 0}px;
+  background-color: ${props => props.isOpen ? props.theme.colors.secondaryLight : props.theme.colors.white};
   overflow: hidden;
-  transition: padding-bottom .1s;
+  z-index: 3;
   cursor: pointer;
   user-select: none;
 
@@ -29,9 +35,10 @@ export const DropDownContainer = styled.div`
   }
 `
 export const DropDownSelected = styled.div`
-  padding-top: 28px;
+  padding-top: 26px;
   padding-left: 27px;
-  padding-bottom: ${props => props.isOpen ? 19 : 28}px;
+  padding-bottom: ${props => props.isOpen ? 19 : 26}px;
+  background-color: ${props => props.theme.colors.white};
   transition: background-color .3s;
   &:hover {
     background-color: ${props => props.theme.colors.secondaryLight};
@@ -48,6 +55,7 @@ export const ListItem = styled.li`
   padding: 12px 0px 12px 27px;
   list-style: none;
   border-bottom: 2px solid ${props => props.theme.colors.secondary};
+  background-color: ${props => props.theme.colors.white};
   transition: all .3s;
   &:hover {
     background-color: ${props => props.theme.colors.secondaryLight};

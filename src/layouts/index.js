@@ -8,7 +8,7 @@ export const ContainerLayout = styled.div`
   width: 100%;
   height: 100%;
   max-width: 1920px;
-  padding: 0 ${({ theme }) => theme.spaces[4]}px;
+  padding: 0 ${props => props.padding || props.theme.spaces[4]}px;
   margin: 0 auto;
 `
 
