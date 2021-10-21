@@ -1,14 +1,23 @@
 import styled from 'styled-components'
 import arrow from '../../assets/arrow.png'
 
+
+export const SelectWrapper = styled.div`
+  position: relative;
+`
 export const DropDownBase = styled.div`
-  width: 401px;
+  max-width: 401px;
+  min-width: 280px;
+  width: 100%;
   height: 94px;
 `
-
 export const DropDownContainer = styled.div`
   position: ${props => props.isOpen ? 'absolute' : 'relative'};
+  left: 0;
+  right: 0;
   max-width: 401px;
+  min-width: 280px;
+  width: 100%;
   min-height: 93px;
   border: 2px solid ${props => props.theme.colors.primary};
   border-radius: 8px;
@@ -20,7 +29,6 @@ export const DropDownContainer = styled.div`
   z-index: 3;
   cursor: pointer;
   user-select: none;
-
   &::after {
     content: '';
     position: absolute;

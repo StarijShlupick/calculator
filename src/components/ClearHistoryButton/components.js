@@ -7,6 +7,7 @@ export const Button = styled.button`
   padding-top: 26px;
   padding-bottom: 26px;
   max-width: 401px;
+  min-width: 280px;
   width: 100%;
   min-height: 93px;
   border: 2px solid ${props => props.theme.colors.primary};

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { DropDownContainer, DropDownSelected, DropDownList, ListItem, DropDownSelectedLine, DropDownBase } from './components'
+import { SelectWrapper, DropDownContainer, DropDownSelected, DropDownList, ListItem, DropDownSelectedLine, DropDownBase } from './components'
 
 export const ThemeSelector = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +17,7 @@ export const ThemeSelector = () => {
   }
 
   return (
-    <React.Fragment>
+    <SelectWrapper>
       <DropDownContainer isOpen={isOpen}>
         <DropDownSelected isOpen={isOpen} onClick={toggling}>{selectedOption || "Light theme"}</DropDownSelected>
         {isOpen && (
@@ -37,6 +37,6 @@ export const ThemeSelector = () => {
       {isOpen && (
         <DropDownBase />
       )}
-    </React.Fragment>
+    </SelectWrapper>
   )
 }
