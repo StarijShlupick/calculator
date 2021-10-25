@@ -33,6 +33,7 @@ const below = Object.keys(size).reduce((acc, label) => {
 
 export const themes = {
   light: {
+    name: 'Light theme',
     above,
     below,
     boxShadows,
@@ -48,6 +49,7 @@ export const themes = {
     },
   },
   colored: {
+    name: 'Colored theme',
     above,
     below,
     boxShadows,
@@ -63,6 +65,7 @@ export const themes = {
     },
   },
   dark: {
+    name: 'Dark theme',
     above,
     below,
     boxShadows,

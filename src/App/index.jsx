@@ -10,23 +10,24 @@ import { SettingsPage } from '@/screens/SettingsPage'
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
 import { ThemeContext } from '@/utils/themeContext'
 import { themes } from '@/theme'
+import { getSelectedTheme } from '@/utils/getSelectedTheme'
 
 
 export class App extends React.Component {
   constructor(props) {
     super(props)
-    this.selectTheme = () => {
-      this.setState(state => ({
-        theme:
-          state.theme === themes.dark
-            ? themes.light
-            : themes.dark,
-      }))
-    }
     this.state = {
       theme: themes.light,
       selectTheme: this.selectTheme,
     }
+    this.selectTheme = this.selectTheme.bind(this)
+  }
+
+  selectTheme = value => {
+    const selectedTheme = getSelectedTheme(themes, value)
+    this.setState({
+      theme: themes[selectedTheme],
+    })
   }
 
   render() {

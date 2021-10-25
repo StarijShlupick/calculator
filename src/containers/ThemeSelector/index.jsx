@@ -5,11 +5,11 @@ import { ThemeContext } from '@/utils/themeContext'
 
 export const ThemeSelector = () => {
   return (
-  <ThemeContext.Consumer>
-    {({theme, pickTheme}) => (
-        <Selector options={THEMES_LIST} selected={theme}
-functionality={pickTheme} />
+    <ThemeContext.Consumer>
+      {({ theme, selectTheme }) => (
+        <Selector options={THEMES_LIST} selected={theme.name}
+          functionality={selectTheme} />
       )}
-  </ThemeContext.Consumer>
+    </ThemeContext.Consumer>
   )
 }

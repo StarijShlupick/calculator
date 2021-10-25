@@ -1,5 +1,5 @@
 import { ClearHistoryButton } from "@/components/ClearHistoryButton"
-import { ThemeSelector } from "@/components/Select"
+import { ThemeSelector } from "@/containers/ThemeSelector"
 import { ContainerLayout } from "@/layouts"
 import React from "react"
 import { SettingsHeader, SettingsContentWrapper, SwitchThemeHeader } from "./components"
