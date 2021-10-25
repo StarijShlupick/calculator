@@ -2,13 +2,6 @@ import { css } from 'styled-components'
 
 const font = 'sans-serif'
 
-// Color palette
-const black = '#000000'
-const white = '#ffffff'
-const primary = '#434343'
-const secondary = '#707070'
-const secondaryLight = '#F2F2F2'
-
 const boxShadows = [
   'box-shadow: 0px 4px 24px -8px rgba(0,0,0,0.75)',
 ]
@@ -38,18 +31,50 @@ const below = Object.keys(size).reduce((acc, label) => {
   return acc
 }, {})
 
-export default {
-  above,
-  below,
-  boxShadows,
-  font,
-  spaces: [0, 4, 8, 16, 32, 64, 128],
-  fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
-  colors: {
-    primary,
-    secondary,
-    secondaryLight,
-    black,
-    white,
+export const themes = {
+  light: {
+    above,
+    below,
+    boxShadows,
+    font,
+    spaces: [0, 4, 8, 16, 32, 64, 128],
+    fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
+    colors: {
+      primary: '#434343',
+      secondary: '#707070',
+      secondaryLight: '#F2F2F2',
+      black: '#000000',
+      white: '#ffffff',
+    },
+  },
+  colored: {
+    above,
+    below,
+    boxShadows,
+    font,
+    spaces: [0, 4, 8, 16, 32, 64, 128],
+    fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
+    colors: {
+      primary: '#434343',
+      secondary: '#707070',
+      secondaryLight: '#F2F2F2',
+      black: '#000fff',
+      white: '#000fff',
+    },
+  },
+  dark: {
+    above,
+    below,
+    boxShadows,
+    font,
+    spaces: [0, 4, 8, 16, 32, 64, 128],
+    fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
+    colors: {
+      primary: '#434343',
+      secondary: '#707070',
+      secondaryLight: '#F2F2F2',
+      black: '#ffffff',
+      white: '#000000',
+    },
   },
 }

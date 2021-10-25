@@ -1,0 +1,1 @@
+export const THEMES_LIST = ['Light theme', 'Colored theme', 'Dark theme']

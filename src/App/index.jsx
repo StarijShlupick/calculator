@@ -1,0 +1,54 @@
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyles } from '@/globalStyles'
+
+import { Header } from '../components/Header'
+import { Switch, Route } from 'react-router-dom'
+import { HomePage } from '@/screens/HomePage'
+import { SettingsPage } from '@/screens/SettingsPage'
+
+import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
+import { ThemeContext } from '@/utils/themeContext'
+import { themes } from '@/theme'
+
+
+export class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.selectTheme = () => {
+      this.setState(state => ({
+        theme:
+          state.theme === themes.dark
+            ? themes.light
+            : themes.dark,
+      }))
+    }
+    this.state = {
+      theme: themes.light,
+      selectTheme: this.selectTheme,
+    }
+  }
+
+  render() {
+    return (
+      <ThemeContext.Provider value={this.state}>
+        <ThemeProvider theme={this.state.theme}>
+          <GlobalStyles theme={this.state.theme} />
+          <Header />
+          <Switch>
+            <Route
+              exact
+              path={HOME_PAGE_ROUTE}
+              component={HomePage}
+            />
+            <Route
+              exact
+              path={SETTINGS_PAGE_ROUTE}
+              component={SettingsPage}
+            />
+          </Switch>
+        </ThemeProvider>
+      </ThemeContext.Provider>
+    )
+  }
+}
