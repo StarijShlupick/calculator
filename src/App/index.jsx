@@ -8,9 +8,8 @@ import { HomePage } from '@/screens/HomePage'
 import { SettingsPage } from '@/screens/SettingsPage'
 
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
-import { ThemeContext } from '@/utils/themeContext'
 import { themes } from '@/theme'
-import { getSelectedTheme } from '@/utils/getSelectedTheme'
+import { getSelectedTheme, ThemeContext } from '@/utils'
 
 
 export class App extends React.Component {

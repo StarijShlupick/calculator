@@ -1,7 +1,7 @@
 import React from 'react'
 import { Selector } from '@/components/Select'
 import { THEMES_LIST } from '@/constants/themes'
-import { ThemeContext } from '@/utils/themeContext'
+import { ThemeContext } from '@/utils'
 
 export const ThemeSelector = () => {
   return (
