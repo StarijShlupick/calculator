@@ -8,7 +8,7 @@ export const Header = props => {
   return (
   <HeaderWrapper {...props}>
     <ContainerLayout display="flex" align="center"
-justify="space-between">
+justify="space-between" height="100%">
       <HeaderTitle {...props}>CalculatorApp</HeaderTitle>
       <HeaderUl>
         <NavLink to={HOME_PAGE_ROUTE} activeClassName="current"
