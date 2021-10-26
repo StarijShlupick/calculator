@@ -17,7 +17,7 @@ export const HeaderUl = styled.ul`
     margin-left: 32px;
     font-size: ${props => props.theme.fontSizes[5]}px;
     line-height: 38px;
-    color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.textSecondary};
     opacity: 70%;
     transition: all .3s;
     &:hover {
@@ -26,7 +26,7 @@ export const HeaderUl = styled.ul`
   }
   .current {
     li {
-      box-shadow: 0px 2px 0px ${props => props.theme.colors.white};
+      box-shadow: 0px 2px 0px ${props => props.theme.colors.textSecondary};
       opacity: 100%;
     }
   }
@@ -35,5 +35,5 @@ export const HeaderTitle = styled.h1`
   font-size: ${props => props.theme.fontSizes[5]}px;
   line-height: 38px;
   font-weight: 400;
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.textSecondary};
 `

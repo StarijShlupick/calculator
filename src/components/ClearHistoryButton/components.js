@@ -13,6 +13,7 @@ export const Button = styled.button`
   border: 2px solid ${props => props.theme.colors.primary};
   border-radius: 8px;
   font-size: ${props => props.theme.fontSizes[5]}px;
+  color: ${props => props.theme.colors.textPrimary};
   line-height: 38px;
   background-color: ${props => props.theme.colors.secondaryLight};
   transition: transform .3s;

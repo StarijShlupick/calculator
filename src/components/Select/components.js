@@ -22,9 +22,10 @@ export const DropDownContainer = styled.div`
   border: 2px solid ${props => props.theme.colors.primary};
   border-radius: 8px;
   font-size: ${props => props.theme.fontSizes[5]}px;
+  color: ${props => props.theme.colors.textPrimary};
   line-height: 38px;
   padding-bottom: ${props => props.isOpen ? 5 : 0}px;
-  background-color: ${props => props.isOpen ? props.theme.colors.secondaryLight : props.theme.colors.white};
+  background-color: ${props => props.isOpen ? props.theme.colors.secondaryLight : props.theme.colors.textSecondary};
   overflow: hidden;
   z-index: 3;
   cursor: pointer;
@@ -46,7 +47,7 @@ export const DropDownSelected = styled.div`
   padding-top: 26px;
   padding-left: 27px;
   padding-bottom: ${props => props.isOpen ? 19 : 26}px;
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.textSecondary};
   transition: background-color .3s;
   &:hover {
     background-color: ${props => props.theme.colors.secondaryLight};
@@ -63,7 +64,7 @@ export const ListItem = styled.li`
   padding: 12px 0px 12px 27px;
   list-style: none;
   border-bottom: 2px solid ${props => props.theme.colors.secondary};
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.textSecondary};
   transition: all .3s;
   &:hover {
     background-color: ${props => props.theme.colors.secondaryLight};
