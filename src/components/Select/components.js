@@ -47,7 +47,7 @@ export const DropDownSelected = styled.div`
   padding-top: 26px;
   padding-left: 27px;
   padding-bottom: ${props => props.isOpen ? 19 : 26}px;
-  background-color: ${props => props.theme.colors.textSecondary};
+  background-color: ${props => props.theme.colors.backgound};
   transition: background-color .3s;
   &:hover {
     background-color: ${props => props.theme.colors.secondaryLight};
@@ -64,7 +64,7 @@ export const ListItem = styled.li`
   padding: 12px 0px 12px 27px;
   list-style: none;
   border-bottom: 2px solid ${props => props.theme.colors.secondary};
-  background-color: ${props => props.theme.colors.textSecondary};
+  background-color: ${props => props.theme.colors.backgound};
   transition: all .3s;
   &:hover {
     background-color: ${props => props.theme.colors.secondaryLight};
