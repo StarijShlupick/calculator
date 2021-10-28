@@ -1,3 +1,8 @@
+import { KeypadButton } from "@/components/KeypadButton"
 import React from "react"
 
-export const HomePage = () => <h2>home</h2>
+export const HomePage = () => {
+  return (
+  <KeypadButton>CE</KeypadButton>
+  )
+}
