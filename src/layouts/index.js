@@ -6,9 +6,11 @@ export const ContainerLayout = styled.div`
   justify-content: ${props => props.justify || "stretch"};
   align-items: ${props => props.align || "stretch"};
   width: 100%;
-  height: ${props => props.height || 'auto'};
+  height: ${props => props.height || "auto"};
   max-width: 1920px;
   padding: 0 ${props => props.padding || props.theme.spaces[4]}px;
+  padding-top: ${props => props.paddingTop || "0"}px;
+  padding-bottom: ${props => props.paddingBottom || "0"}px;
   margin: 0 auto;
 `
 

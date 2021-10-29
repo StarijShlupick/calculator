@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { SelectWrapper, DropDownContainer, DropDownSelected, DropDownList, ListItem, DropDownSelectedLine, DropDownBase } from './components'
 
 export const Selector = props => {
@@ -23,8 +23,8 @@ export const Selector = props => {
             <DropDownSelectedLine />
             {options.filter(option => {
               return option !== selectedOption
-            }).map((option, index) => (
-              <ListItem key={index} onClick={onOptionClicked(option)}>
+            }).map(option => (
+              <ListItem key={option} onClick={onOptionClicked(option)}>
                 {option}
               </ListItem>
             ))
