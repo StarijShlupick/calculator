@@ -3,7 +3,7 @@ import { Display } from "../Display"
 import { Keypad } from "../Keypad"
 import { History } from "../History"
 import { CalculatorWrapper, FunctionalContainer } from "./components"
-import { AddCharacterCommand, CalculatorContext, CalculatorLogic } from "@/utils"
+import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand } from "@/utils"
 
 export class Calculator extends React.Component {
   constructor(props) {
@@ -28,10 +28,16 @@ export class Calculator extends React.Component {
         })
         break
       case 'clearAll':
-        console.log('clearAll')
+        this.calculator.execute(new ClearAllCommand())
+        this.setState({
+          display: this.calculator.value,
+        })
         break
       case 'equal':
-        console.log('equal')
+        this.calculator.execute(new ComputeCommand())
+        this.setState({
+          display: this.calculator.value,
+        })
         break
       default:
         console.log(charType + 'цифра')

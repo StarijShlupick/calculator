@@ -36,7 +36,7 @@ export const KEYPAD_BUTTONS = [
     type: 'char',
   },
   {
-    value: '\\',
+    value: '/',
     type: 'char',
   },
   {
