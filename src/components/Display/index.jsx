@@ -1,16 +1,16 @@
+import { CalculatorContext } from "@/utils"
 import React from "react"
-import { DisplayedValue, DisplayWrapper } from "./components"
+import { DisplayedValue, DisplayedValueWrapper, DisplayWrapper } from "./components"
 
 export class Display extends React.Component {
-  // constructor(props){
-  //   super(props)
-  // }
-
   render() {
     return (
       <DisplayWrapper>
-        <DisplayedValue>4500.233</DisplayedValue>
+        <DisplayedValueWrapper>
+          <DisplayedValue>{this.context.display.join('')}</DisplayedValue>
+        </DisplayedValueWrapper>
       </DisplayWrapper>
     )
   }
 }
+Display.contextType = CalculatorContext
