@@ -1,4 +1,6 @@
 import { compute } from "./compute"
+import { store } from "@/store"
+import { addToHistory } from "@/actions"
 
 export class AddCharacterCommand {
   constructor(newChar) {
@@ -28,6 +30,9 @@ export class ClearAllCommand {
 
 export class ComputeCommand {
   execute(currentValue) {
+    if (currentValue.length !== 0 && /\+|-|\*|\//g.test(currentValue.join(''))) {
+      store.dispatch(addToHistory(currentValue.join('')))
+    }
     return compute(currentValue)
   }
   

@@ -40,4 +40,13 @@ export const Operation = styled.li`
   line-height: 36px;
   color: ${props => props.theme.colors.textPrimary};
   margin-bottom: 50px;
+  cursor: pointer;
+`
+export const HistoryAlert = styled.div`
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  color: ${props => props.theme.colors.primary};
 `

@@ -1,7 +1,7 @@
 import React from "react"
 import { Display } from "../Display"
 import { Keypad } from "../Keypad"
-import { History } from "../History"
+import History from "../History"
 import { CalculatorWrapper, FunctionalContainer } from "./components"
 import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand } from "@/utils"
 
