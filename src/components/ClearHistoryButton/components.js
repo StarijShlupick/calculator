@@ -22,4 +22,7 @@ export const Button = styled.button`
   &:hover {
     transform: translateY(-3%);
   }
+  &:active {
+    transform: translateY(+3%);
+  }
 `

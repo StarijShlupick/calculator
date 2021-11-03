@@ -40,7 +40,6 @@ export class Calculator extends React.Component {
         })
         break
       default:
-        console.log(charType + 'цифра')
         this.calculator.execute(new AddCharacterCommand(charValue))
         this.setState({
           display: this.calculator.value,

@@ -2,7 +2,6 @@ export class CalculatorLogic {
   constructor() {
     this.value = []
     this.commandHistory = []
-    this.computingHistory = []
   }
 
   execute(command) {

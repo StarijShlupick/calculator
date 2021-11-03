@@ -12,8 +12,8 @@ class History extends React.Component {
             {this.props.historyStack.length === 0 && (
               <HistoryAlert>There is no expressions yet</HistoryAlert>
             )}
-            {this.props.historyStack.map(expression => {
-              return (<Operation onClick={() => console.log(expression)} key={expression}>{expression}</Operation>)
+            {this.props.historyStack.map((expression, index) => {
+              return (<Operation onClick={() => console.log(expression)} key={index}>{expression}</Operation>)
             })}
           </OperationsList>
         </OperationListWrapper>

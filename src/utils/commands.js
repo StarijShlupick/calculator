@@ -30,7 +30,14 @@ export class ClearAllCommand {
 
 export class ComputeCommand {
   execute(currentValue) {
-    if (currentValue.length !== 0 && /\+|-|\*|\//g.test(currentValue.join(''))) {
+    const currentValueString = currentValue.join('')
+    if (currentValue.length !== 0 && 
+      /\+|-|\*|\//g.test(currentValueString) && 
+      currentValueString !== '.' && 
+      currentValueString !== '+' && 
+      currentValueString !== '-' && 
+      currentValueString !== '*' && 
+      currentValueString !== '/') {
       store.dispatch(addToHistory(currentValue.join('')))
     }
     return compute(currentValue)
