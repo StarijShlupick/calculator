@@ -3,7 +3,7 @@ import { Display } from "../Display"
 import { Keypad } from "../Keypad"
 import History from "../History"
 import { CalculatorWrapper, FunctionalContainer } from "./components"
-import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand } from "@/utils"
+import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from "@/utils"
 
 export class Calculator extends React.Component {
   constructor(props) {
@@ -12,9 +12,11 @@ export class Calculator extends React.Component {
     this.state = {
       calculator: this.calculator,
       pressButton: this.pressButton,
+      passHistoryExpression: this.passHistoryExpression,
       display: this.calculator.value,
     }
     this.pressButton = this.pressButton.bind(this)
+    this.passHistoryExpression = this.passHistoryExpression.bind(this)
   }
 
   pressButton = (value, type) => {
@@ -45,6 +47,13 @@ export class Calculator extends React.Component {
           display: this.calculator.value,
         })
     }
+  }
+
+  passHistoryExpression = value => {
+    this.calculator.execute(new PassExpressionFromHistory(value))
+    this.setState({
+      display: this.calculator.value,
+    })
   }
 
   render() {

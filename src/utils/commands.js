@@ -1,6 +1,7 @@
 import { compute } from "./compute"
 import { store } from "@/store"
 import { addToHistory } from "@/actions"
+import { isValidInput } from "./computeLogic"
 
 export class AddCharacterCommand {
   constructor(newChar) {
@@ -19,7 +20,7 @@ export class AddCharacterCommand {
 }
 
 export class ClearAllCommand {
-  execute(currentValue) {
+  execute() {
     return []
   }
 
@@ -31,19 +32,30 @@ export class ClearAllCommand {
 export class ComputeCommand {
   execute(currentValue) {
     const currentValueString = currentValue.join('')
-    if (currentValue.length !== 0 && 
-      /\+|-|\*|\//g.test(currentValueString) && 
-      currentValueString !== '.' && 
-      currentValueString !== '+' && 
-      currentValueString !== '-' && 
-      currentValueString !== '*' && 
-      currentValueString !== '/') {
+    if (currentValue.length !== 0 &&
+      isValidInput(currentValueString)) {
       store.dispatch(addToHistory(currentValue.join('')))
     }
     return compute(currentValue)
   }
-  
-  undo(currentValue) {
+
+  undo() {
     return []
+  }
+}
+
+export class PassExpressionFromHistory {
+  constructor(newChar) {
+    this.newChar = newChar
+  }
+
+  execute() {
+    return [this.newChar]
+  }
+
+  undo(currentValue) {
+    const prevStack = [...currentValue]
+    prevStack.pop()
+    return prevStack
   }
 }

@@ -55,6 +55,14 @@ export const throwUnmatchedScopes = string => {
   }
 }
 
+export const isValidInput = string => {
+  return string !== '.' &&
+  string !== '+' &&
+  string !== '-' &&
+  string !== '*' &&
+  string !== '/'
+}
+
 export const throughParenthesesRecursion = string => {
   string = fixString(string)
 

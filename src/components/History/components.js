@@ -13,7 +13,7 @@ export const HistoryHeader = styled.h3`
   line-height: 38px;
   color: ${props => props.theme.colors.textPrimary};
 `
-export const OperationListWrapper = styled.div`
+export const HistoryListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-height: 800px;
@@ -27,20 +27,12 @@ export const OperationListWrapper = styled.div`
     border-radius: 8px;
   }
 `
-export const OperationsList = styled.ul`
+export const HistoryList = styled.ul`
   display: flex;
   flex-direction: column-reverse;
   justify-content: start;
   align-items: flex-start;
   list-style: none;
-`
-export const Operation = styled.li`
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  color: ${props => props.theme.colors.textPrimary};
-  margin-bottom: 50px;
-  cursor: pointer;
 `
 export const HistoryAlert = styled.div`
   width: 100%;
