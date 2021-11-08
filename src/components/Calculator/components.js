@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
-export const CalculatorWrapper = styled.section`
+export const CalculatorContainer = styled.section``
+export const CalculatorWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;

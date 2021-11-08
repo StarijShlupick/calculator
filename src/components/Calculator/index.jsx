@@ -1,8 +1,9 @@
 import React from "react"
 import { Display } from "../Display"
 import { Keypad } from "../Keypad"
+import ControlPanel  from "../ControlPanel"
 import History from "../History"
-import { CalculatorWrapper, FunctionalContainer } from "./components"
+import { CalculatorContainer, CalculatorWrapper, FunctionalContainer } from "./components"
 import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from "@/utils"
 
 export class Calculator extends React.Component {
@@ -11,12 +12,15 @@ export class Calculator extends React.Component {
     this.calculator = new CalculatorLogic
     this.state = {
       calculator: this.calculator,
+      display: this.calculator.value,
+      isHistoryFull: false,
       pressButton: this.pressButton,
       passHistoryExpression: this.passHistoryExpression,
-      display: this.calculator.value,
+      changeHistoryMode: this.changeHistoryMode,
     }
     this.pressButton = this.pressButton.bind(this)
     this.passHistoryExpression = this.passHistoryExpression.bind(this)
+    this.changeHistoryMode = this.changeHistoryMode.bind(this)
   }
 
   pressButton = (value, type) => {
@@ -56,16 +60,25 @@ export class Calculator extends React.Component {
     })
   }
 
+  changeHistoryMode = () => {
+    this.setState(state => {
+      return {isHistoryFull: !state.isHistoryFull}
+    })
+  }
+
   render() {
     return (
       <CalculatorContext.Provider value={this.state}>
-        <CalculatorWrapper>
-          <FunctionalContainer>
-            <Display />
-            <Keypad />
-          </FunctionalContainer>
-          <History />
-        </CalculatorWrapper>
+        <CalculatorContainer>
+          <CalculatorWrapper>
+            <FunctionalContainer>
+              <Display />
+              <Keypad />
+              <ControlPanel />
+            </FunctionalContainer>
+            <History />
+          </CalculatorWrapper>
+        </CalculatorContainer>
       </CalculatorContext.Provider>
     )
   }
