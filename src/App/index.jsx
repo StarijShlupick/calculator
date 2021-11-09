@@ -10,6 +10,7 @@ import { SettingsPage } from '@/screens/SettingsPage'
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
 import { themes } from '@/theme'
 import { getSelectedTheme, ThemeContext } from '@/utils'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 
 export class App extends React.Component {
@@ -39,12 +40,20 @@ export class App extends React.Component {
             <Route
               exact
               path={HOME_PAGE_ROUTE}
-              component={HomePage}
+              render={() => (
+                <ErrorBoundary>
+                  <HomePage />
+                </ErrorBoundary>
+              )}
             />
             <Route
               exact
               path={SETTINGS_PAGE_ROUTE}
-              component={SettingsPage}
+              render={() => (
+                <ErrorBoundary>
+                  <SettingsPage />
+                </ErrorBoundary>
+              )}
             />
           </Switch>
         </ThemeProvider>
