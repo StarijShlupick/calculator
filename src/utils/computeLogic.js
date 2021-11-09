@@ -1,4 +1,6 @@
 import { ADDITION_AND_SUBTRACTION, MULTIPLICATION_AND_DIVISION } from "@/constants/calculationType"
+import { store } from "@/store"
+import { addToHistory } from "@/actions"
 
 export const fixString = string => {
   return string
@@ -52,6 +54,7 @@ export const throwUnmatchedScopes = string => {
 
   if (paranthesesOpened !== paranthesesClosed) {
     alert("Incorrect parentheses in " + string)
+    return ''
   }
 }
 
@@ -60,7 +63,10 @@ export const isValidInput = string => {
   string !== '+' &&
   string !== '-' &&
   string !== '*' &&
-  string !== '/'
+  string !== '/' && 
+  string !== '(' && 
+  string !== ')' && 
+  string !== '()'
 }
 
 export const throughParenthesesRecursion = string => {
