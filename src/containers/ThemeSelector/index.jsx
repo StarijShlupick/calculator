@@ -1,6 +1,6 @@
 import { Selector } from '@/components/Select'
-import { THEMES_LIST } from '@/constants/themes'
 import { ThemeContext } from '@/utils'
+import { THEMES_LIST } from '@/constants'
 import React, { useContext } from 'react'
 
 export const ThemeSelector = () => {
