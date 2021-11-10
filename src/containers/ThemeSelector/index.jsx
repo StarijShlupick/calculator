@@ -7,8 +7,8 @@ export const ThemeSelector = () => {
   const context = useContext(ThemeContext)
   return (
     <React.Fragment>
-      <Selector options={THEMES_LIST} selected={context.theme.name}
-                functionality={context.selectTheme} />
+      <Selector options={THEMES_LIST} defaultValue={context.theme.name}
+                handleSelection={context.selectTheme} />
     </React.Fragment>
   )
 }
