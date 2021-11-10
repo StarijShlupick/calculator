@@ -1,5 +1,5 @@
 import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from '@/utils'
-
+import { CALCULATE_SYMBOL, CLEAR_SYMBOL, REFRESH_SYMBOL } from '@/constants'
 import React from 'react'
 import { Display } from '../Display'
 import { Keypad } from '../Keypad'
@@ -26,19 +26,19 @@ export class Calculator extends React.Component {
 
   pressButton = (value, type) => {
     switch (type) {
-      case 'clear':
+      case CLEAR_SYMBOL:
         this.calculator.undo()
         this.setState({
           display: this.calculator.value,
         })
         break
-      case 'clearAll':
+      case REFRESH_SYMBOL:
         this.calculator.execute(new ClearAllCommand())
         this.setState({
           display: this.calculator.value,
         })
         break
-      case 'equal':
+      case CALCULATE_SYMBOL:
         this.calculator.execute(new ComputeCommand())
         this.setState({
           display: this.calculator.value,

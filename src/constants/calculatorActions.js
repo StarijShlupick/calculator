@@ -1,0 +1,4 @@
+export const CLEAR_SYMBOL = 'CLEAR_SYMBOL'
+export const REFRESH_SYMBOL = 'REFRESH_SYMBOL'
+export const CALCULATE_SYMBOL = 'CALCULATE_SYMBOL'
+export const ADD_SYMBOL = 'ADD_SYMBOL'
