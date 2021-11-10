@@ -6,6 +6,10 @@ const boxShadows = [
   'box-shadow: 0px 4px 24px -8px rgba(0,0,0,0.75)',
 ]
 
+const spaces = [0, 4, 8, 16, 32, 64, 128]
+
+const fontSizes = [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80]
+
 const size = {
   xs: 550,
   small: 768,
@@ -38,15 +42,15 @@ export const themes = {
     below,
     boxShadows,
     font,
-    spaces: [0, 4, 8, 16, 32, 64, 128],
-    fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
+    spaces,
+    fontSizes,
     colors: {
       primary: '#434343',
       secondary: '#707070',
       secondaryLight: '#F2F2F2',
       textPrimary: '#000000',
       textSecondary: '#FFFFFF',
-      backgound: '#FFFFFF',
+      background: '#FFFFFF',
     },
   },
   colored: {
@@ -55,15 +59,15 @@ export const themes = {
     below,
     boxShadows,
     font,
-    spaces: [0, 4, 8, 16, 32, 64, 128],
-    fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
+    spaces,
+    fontSizes,
     colors: {
       primary: '#125C13',
       secondary: '#3E7C17',
       secondaryLight: '#E9F7F7',
       textPrimary: '#000000',
       textSecondary: '#FFFFFF',
-      backgound: '#F7FFFF',
+      background: '#F7FFFF',
     },
   },
   dark: {
@@ -72,15 +76,15 @@ export const themes = {
     below,
     boxShadows,
     font,
-    spaces: [0, 4, 8, 16, 32, 64, 128],
-    fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
+    spaces,
+    fontSizes,
     colors: {
       primary: '#707070',
       secondary: '#363636',
       secondaryLight: '#515151',
       textPrimary: '#FFFFFF',
       textSecondary: '#FFFFFF',
-      backgound: '#434343',
+      background: '#434343',
     },
   },
 }
