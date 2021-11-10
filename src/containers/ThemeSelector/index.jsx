@@ -1,5 +1,5 @@
 import { Selector } from '@/components/Select'
-import { ThemeContext } from '@/utils'
+import { ThemeContext } from '@/contexts'
 import { THEMES_LIST } from '@/constants'
 import React, { useContext } from 'react'
 

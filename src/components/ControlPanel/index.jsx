@@ -1,5 +1,5 @@
 import { clearHistory } from '@/actions'
-import { CalculatorContext } from '@/utils'
+import { CalculatorContext } from '@/contexts'
 import React from 'react'
 import { connect } from 'react-redux'
 import { ControlPanelButton, ControlPanelContainer } from './components'

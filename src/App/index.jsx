@@ -4,7 +4,7 @@ import { HomePage } from '@/screens/HomePage'
 import { SettingsPage } from '@/screens/SettingsPage'
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
 import { themes } from '@/theme'
-import { getSelectedTheme, ThemeContext } from '@/utils'
+import { getSelectedTheme, ThemeContext } from '@/contexts'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 import React from 'react'

@@ -1,4 +1,4 @@
-import { CalculatorContext } from '@/utils'
+import { CalculatorContext } from '@/contexts'
 import React from 'react'
 import { DisplayedValue, DisplayedValueWrapper, DisplayWrapper } from './components'
 

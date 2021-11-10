@@ -1,4 +1,5 @@
-import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from '@/utils'
+import { AddCharacterCommand, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from '@/utils'
+import { CalculatorContext } from '@/contexts'
 import { CALCULATE_SYMBOL, CLEAR_SYMBOL, REFRESH_SYMBOL } from '@/constants'
 import React from 'react'
 import { Display } from '../Display'
