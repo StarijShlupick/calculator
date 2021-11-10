@@ -1,12 +1,10 @@
-import { ADDITION_AND_SUBTRACTION, MULTIPLICATION_AND_DIVISION } from "@/constants/calculationType"
-import { store } from "@/store"
-import { addToHistory } from "@/actions"
+import { ADDITION_AND_SUBTRACTION, MULTIPLICATION_AND_DIVISION } from '@/constants'
 
 export const fixString = string => {
   return string
     .replace(/\(\)/g, "") // clear empty parentheses
     .replace(/--/g, "+")  // -- => +
-    .replace(/(\+\+|\*\*|\/\/)/g, (mathc, operator) => operator[0]) // multiple operetors in a row => operator
+    .replace(/(\+\+|\*\*|\/\/)/g, (match, operator) => operator[0]) // multiple operators in a row => operator
     .replace(/\+-|-\+/g, "-") // +-,-+ => -
     .replace(/\)\(/g, ")*(") // )( => )*(
     .replace(/(\d)\(/g, "$1*(") // parentheses after digit => multiply
@@ -40,7 +38,7 @@ const calculateExpression = (calculationType = ADDITION_AND_SUBTRACTION, string)
   for (let i = 0; i < length; i++) {
     string = string.replace(
       regExp,
-      (match, a, oper, b) => calculate[oper](a, b),
+      (match, a, operator, b) => calculate[operator](a, b),
     )
     string = fixString(string)
   }
@@ -49,10 +47,10 @@ const calculateExpression = (calculationType = ADDITION_AND_SUBTRACTION, string)
 }
 
 export const throwUnmatchedScopes = string => {
-  const paranthesesOpened = (string.match(/\(/g) || []).length
-  const paranthesesClosed = (string.match(/\)/g) || []).length
+  const parenthesesOpened = (string.match(/\(/g) || []).length
+  const parenthesesClosed = (string.match(/\)/g) || []).length
 
-  if (paranthesesOpened !== paranthesesClosed) {
+  if (parenthesesOpened !== parenthesesClosed) {
     alert("Incorrect parentheses in " + string)
     return ''
   }
@@ -63,9 +61,9 @@ export const isValidInput = string => {
   string !== '+' &&
   string !== '-' &&
   string !== '*' &&
-  string !== '/' && 
-  string !== '(' && 
-  string !== ')' && 
+  string !== '/' &&
+  string !== '(' &&
+  string !== ')' &&
   string !== '()'
 }
 
