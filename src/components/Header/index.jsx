@@ -1,8 +1,8 @@
-import { ContainerLayout } from "@/layouts"
-import React from "react"
-import { HeaderUl, HeaderTitle, HeaderWrapper } from "./components"
-import { NavLink } from "react-router-dom"
-import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from "@/constants"
+import { ContainerLayout } from '@/layouts'
+import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
+import React from 'react'
+import { HeaderUl, HeaderTitle, HeaderWrapper } from './components'
+import { NavLink } from 'react-router-dom'
 
 export const Header = props => {
   return (

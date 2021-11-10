@@ -1,14 +1,14 @@
-import { CalculatorContext } from "@/utils"
-import React from "react"
-import { connect } from "react-redux"
-import { HistoryItem } from "../HistoryItem"
-import { HistoryAlert, HistoryContainer, HistoryHeader, HistoryListWrapper, HistoryList } from "./components"
+import { CalculatorContext } from '@/utils'
+import React from 'react'
+import { connect } from 'react-redux'
+import { HistoryItem } from '../HistoryItem'
+import { HistoryAlert, HistoryContainer, HistoryHeader, HistoryListWrapper, HistoryList } from './components'
 
 class History extends React.Component {
   render() {
-    const list = this.context.isHistoryFull 
-    ? this.props.historyStack.map((expression, index) => (<HistoryItem value={expression} key={index}/>)) 
-    : this.props.historyStack.slice(-5).map((expression, index) => (<HistoryItem value={expression} key={Math.random(index)}/>))
+    const list = this.context.isHistoryFull
+    ? this.props.historyStack.map((expression, index) => <HistoryItem value={expression} key={index}/>)
+    : this.props.historyStack.slice(-5).map(expression => <HistoryItem value={expression} key={Math.random()}/>)
     return (
       <HistoryContainer>
         <HistoryHeader>History</HistoryHeader>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SelectWrapper, DropDownContainer, DropDownSelected, DropDownList, ListItem, DropDownSelectedLine, DropDownBase } from './components'
 
 export const Selector = props => {
-  const {options, selected, functionality: setSelectedState} = props
+  const { options, selected, functionality: setSelectedState } = props
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState(selected)
 
@@ -21,13 +21,11 @@ export const Selector = props => {
         {isOpen && (
           <DropDownList>
             <DropDownSelectedLine />
-            {options.filter(option => {
-              return option !== selectedOption
-            }).map(option => (
-              <ListItem key={option} onClick={onOptionClicked(option)}>
-                {option}
-              </ListItem>
-            ))
+            {options.filter(option => option !== selectedOption)
+              .map(option =>
+                <ListItem key={option} onClick={onOptionClicked(option)}>
+                  {option}
+                </ListItem>)
             }
           </DropDownList>
         )}

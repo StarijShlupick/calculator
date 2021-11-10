@@ -1,8 +1,8 @@
-import { clearHistory } from "@/actions"
-import { CalculatorContext } from "@/utils"
-import React from "react"
-import { connect } from "react-redux"
-import { ControlPanelButton, ControlPanelContainer } from "./components"
+import { clearHistory } from '@/actions'
+import { CalculatorContext } from '@/utils'
+import React from 'react'
+import { connect } from 'react-redux'
+import { ControlPanelButton, ControlPanelContainer } from './components'
 
 class ControlPanel extends React.Component {
   render() {

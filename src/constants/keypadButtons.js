@@ -1,6 +1,6 @@
 export const KEYPAD_BUTTONS = [
   {
-    value:'C',
+    value: 'C',
     type: 'clear',
   },
   {

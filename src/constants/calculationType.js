@@ -1,2 +1,2 @@
-export const MULTIPLICATION_AND_DIVISION = 'multiplication and division'
-export const ADDITION_AND_SUBTRACTION = 'addition and subtraction'
+export const MULTIPLICATION_AND_DIVISION = 'MULTIPLICATION_AND_DIVISION'
+export const ADDITION_AND_SUBTRACTION = 'ADDITION_AND_SUBTRACTION'

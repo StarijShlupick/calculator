@@ -1,17 +1,15 @@
-import React from 'react'
-import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '@/globalStyles'
-
-import { Header } from '../components/Header'
-import { Switch, Route } from 'react-router-dom'
+import { Header } from '@/components/Header'
 import { HomePage } from '@/screens/HomePage'
 import { SettingsPage } from '@/screens/SettingsPage'
-
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
 import { themes } from '@/theme'
 import { getSelectedTheme, ThemeContext } from '@/utils'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { Switch, Route } from 'react-router-dom'
 
 export class App extends React.Component {
   constructor(props) {

@@ -1,6 +1,6 @@
-import { CalculatorContext } from "@/utils"
-import React from "react"
-import { ButtonWrapper } from "./components"
+import { CalculatorContext } from '@/utils'
+import React from 'react'
+import { ButtonWrapper } from './components'
 
 export class KeypadButton extends React.Component {
   render() {
@@ -11,4 +11,5 @@ export class KeypadButton extends React.Component {
     )
   }
 }
+
 KeypadButton.contextType = CalculatorContext

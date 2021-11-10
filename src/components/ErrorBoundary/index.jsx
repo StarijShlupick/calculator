@@ -1,6 +1,6 @@
-import { ContainerLayout } from "@/layouts"
-import React from "react"
-import { ErrorHeader, ErrorMessage, ErrorInfo, ErrorName } from "./components"
+import { ContainerLayout } from '@/layouts'
+import React from 'react'
+import { ErrorHeader, ErrorMessage, ErrorInfo} from './components'
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {

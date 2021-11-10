@@ -1,6 +1,6 @@
-import { CalculatorContext } from "@/utils"
-import React from "react"
-import { DisplayedValue, DisplayedValueWrapper, DisplayWrapper } from "./components"
+import { CalculatorContext } from '@/utils'
+import React from 'react'
+import { DisplayedValue, DisplayedValueWrapper, DisplayWrapper } from './components'
 
 export class Display extends React.Component {
   render() {

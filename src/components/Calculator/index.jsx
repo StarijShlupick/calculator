@@ -1,10 +1,11 @@
-import React from "react"
-import { Display } from "../Display"
-import { Keypad } from "../Keypad"
-import ControlPanel  from "../ControlPanel"
-import History from "../History"
-import { CalculatorContainer, CalculatorWrapper, FunctionalContainer } from "./components"
-import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from "@/utils"
+import { AddCharacterCommand, CalculatorContext, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from '@/utils'
+
+import React from 'react'
+import { Display } from '../Display'
+import { Keypad } from '../Keypad'
+import ControlPanel from '../ControlPanel'
+import History from '../History'
+import { CalculatorContainer, CalculatorWrapper, FunctionalContainer } from './components'
 
 export class Calculator extends React.Component {
   constructor(props) {
@@ -24,9 +25,7 @@ export class Calculator extends React.Component {
   }
 
   pressButton = (value, type) => {
-    const charValue = value
-    const charType = type
-    switch (charType) {
+    switch (type) {
       case 'clear':
         this.calculator.undo()
         this.setState({
@@ -46,7 +45,7 @@ export class Calculator extends React.Component {
         })
         break
       default:
-        this.calculator.execute(new AddCharacterCommand(charValue))
+        this.calculator.execute(new AddCharacterCommand(value))
         this.setState({
           display: this.calculator.value,
         })
@@ -62,7 +61,7 @@ export class Calculator extends React.Component {
 
   changeHistoryMode = () => {
     this.setState(state => {
-      return {isHistoryFull: !state.isHistoryFull}
+      return { isHistoryFull: !state.isHistoryFull }
     })
   }
 

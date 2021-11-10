@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const CalculatorContainer = styled.section``
 export const CalculatorWrapper = styled.div`

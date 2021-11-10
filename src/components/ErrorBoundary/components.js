@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const ErrorHeader = styled.h1`
   margin: 0;
