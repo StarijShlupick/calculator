@@ -7,7 +7,7 @@ export class Display extends React.Component {
     return (
       <DisplayWrapper>
         <DisplayedValueWrapper>
-          <DisplayedValue>{this.context.display.join('')}</DisplayedValue>
+          <DisplayedValue>{this.context.display}</DisplayedValue>
         </DisplayedValueWrapper>
       </DisplayWrapper>
     )
