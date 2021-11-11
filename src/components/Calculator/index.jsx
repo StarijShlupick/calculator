@@ -1,4 +1,4 @@
-import { AddCharacterCommand, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionFromHistory } from '@/utils'
+import { AddCharacterCommand, CalculatorLogic, ClearAllCommand, ComputeCommand, PassExpressionCommand } from '@/services'
 import { CalculatorContext } from '@/contexts'
 import { CALCULATE_SYMBOL, CLEAR_SYMBOL, REFRESH_SYMBOL } from '@/constants'
 import React from 'react'
@@ -54,7 +54,7 @@ export class Calculator extends React.Component {
   }
 
   passHistoryExpression = value => {
-    this.calculator.execute(new PassExpressionFromHistory(value))
+    this.calculator.execute(new PassExpressionCommand(value))
     this.setState({
       display: this.calculator.value,
     })

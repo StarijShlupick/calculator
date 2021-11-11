@@ -1,0 +1,5 @@
+export * from './command'
+export * from './addCharacterCommand'
+export * from './clearAllCommand'
+export * from './computeCommand'
+export * from './passExpressionCommand'

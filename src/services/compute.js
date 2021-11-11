@@ -1,4 +1,4 @@
-import { throwUnmatchedScopes, throughParenthesesRecursion, fixString, parseExpression } from "./computeLogic"
+import { throwUnmatchedScopes, throughParenthesesRecursion, fixString, parseExpression } from './computeLogic'
 
 export const compute = valueStack => {
   let resultString = valueStack.join('')
