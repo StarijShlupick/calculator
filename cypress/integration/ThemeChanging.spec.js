@@ -1,6 +1,6 @@
 describe('Check theme selector component', () => {
   it('Check theme switching to dark theme', () => {
-    cy.visit('/settings')
+    cy.visit('#/settings')
 
     cy.contains('Light theme').click()
     cy.contains('Dark theme').click()
