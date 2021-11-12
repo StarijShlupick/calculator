@@ -13,7 +13,7 @@ class History extends React.Component {
       <HistoryContainer>
         <HistoryHeader>History</HistoryHeader>
         <HistoryListWrapper>
-          <HistoryList>
+          <HistoryList data-test-history>
             {this.props.historyStack.length === 0 && (
               <HistoryAlert>There is no expressions yet</HistoryAlert>
             )}

@@ -2,10 +2,7 @@ describe('History test', () => {
   it('Check history functionality', () => {
     cy.visit('/')
 
-    cy.get('button').contains('1').click()
-    cy.get('button').contains('+').click()
-    cy.get('button').contains('3').click()
-    cy.get('button').contains('=').click()
+    cy.doMath('1', '+', '3')
     cy.get('li').contains('1+3')
   })
 
